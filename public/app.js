@@ -1,0 +1,4 @@
+const form=document.getElementById('quoteForm');const statusEl=document.getElementById('status');
+form.addEventListener('submit',async(e)=>{e.preventDefault();const button=form.querySelector('button[type="submit"]');button.disabled=true;statusEl.textContent='Guardando cotización...';
+const fd=new FormData(form);const data=Object.fromEntries(fd.entries());data.servicios=fd.getAll('servicios');
+try{const r=await fetch('/api/cotizaciones',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});const out=await r.json();if(!r.ok)throw new Error(out.error||'No se pudo guardar');statusEl.textContent='Cotización guardada. Abriendo WhatsApp...';window.open(out.whatsappUrl,'_blank','noopener');form.reset();}catch(err){statusEl.textContent='Error: '+err.message;}finally{button.disabled=false;}});

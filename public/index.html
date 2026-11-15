@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>cotiza tu proximo viaje en segundos | Boletos y servicios de viaje</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top"><a class="brand" href="#inicio" aria-label="cotiza tu proximo viaje">
+<svg class="logo" viewBox="0 0 120 70" role="img" aria-label="Avion blanco original"><path d="M8 38 49 29 77 7c4-3 10-4 14-1 3 3 2 7-2 10L72 31l36 8c5 1 7 6 3 9-2 2-5 2-8 1l-39-5-18 19-10-2 8-20-22 4-8 9-7-2 5-12z" fill="#d71920"/></svg>
+<span><b>COTIZA TU PRÓXIMO VIAJE</b><small>Boletos a todo el mundo</small></span></a>
+<nav><a href="#servicios">Servicios</a><a href="#cotizar">Cotizar</a><a href="tel:+87900263">87900263</a></nav></header>
+<main id="inicio">
+<section class="hero"><div><span class="eyebrow">VIAJES SIN FRONTERAS</span><h1>Tu próximo destino comienza aquí.</h1><p>Cotiza boletos aéreos y servicios de viaje por país y ciudad, con atención directa de un asistente de ventas.</p><div class="actions"><a class="btn red" href="#cotizar">Cotizar ahora</a><a class="btn white" href="https://wa.me/50487900263" target="_blank" rel="noopener">WhatsApp 87900263</a></div></div></section>
+<section id="destinos" class="section destinations"><div class="title"><span>DESTINOS DESTACADOS</span><h2>Inspírate para tu próximo viaje</h2><p>Descubre algunos de los destinos que puedes cotizar directamente con Viaja con un agente de ventas.</p></div><div class="destination-grid">
+<article class="destination ny"><div><small>ESTADOS UNIDOS</small><h3>Nueva York</h3><a href="#cotizar">Cotizar viaje</a></div></article>
+<article class="destination paris"><div><small>FRANCIA</small><h3>París</h3><a href="#cotizar">Cotizar viaje</a></div></article>
+<article class="destination spain"><div><small>ESPAÑA</small><h3>Barcelona</h3><a href="#cotizar">Cotizar viaje</a></div></article>
+<article class="destination mexico"><div><small>MÉXICO</small><h3>Caribe mexicano</h3><a href="#cotizar">Cotizar viaje</a></div></article>
+<article class="destination miami"><div><small>ESTADOS UNIDOS</small><h3>Miami</h3><a href="#cotizar">Cotizar viaje</a></div></article>
+</div></section>
+<section id="servicios" class="section"><div class="title"><span>SERVICIOS</span><h2>Todo organizado para tu viaje</h2></div><div class="cards">
+<article><b>✈️ Boletos aéreos</b><p>Cotizaciones nacionales e internacionales.</p></article><article><b>🏨 Hotel</b><p>Solicitud de alojamiento según destino.</p></article><article><b>🛡️ Seguro de viaje</b><p>Opciones de asistencia para viajar con tranquilidad.</p></article><article><b>🚗 Transporte</b><p>Alquiler de vehículo y traslados.</p></article></div></section>
+<section id="cotizar" class="section form-section"><div class="title"><span>COTIZACIÓN</span><h2>Cuéntanos cómo quieres viajar</h2><p>Los datos se guardarán en la base de Excel del negocio y se preparará un mensaje para WhatsApp.</p></div>
+<form id="quoteForm">
+<div class="grid">
+<label>Nombre completo<input name="nombre" required></label><label>Teléfono<input name="telefono" type="tel" required></label><label>Correo electrónico<input name="correo" type="email"></label><label>Presupuesto aproximado (HNL)<input name="presupuesto" type="number" min="0"></label>
+<label>País de origen<input name="paisOrigen" required></label><label>Ciudad de origen<input name="ciudadOrigen" required></label><label>País de destino<input name="paisDestino" required></label><label>Ciudad de destino<input name="ciudadDestino" required></label>
+<label>Fecha de salida<input name="salida" type="date" required></label><label>Fecha de regreso<input name="regreso" type="date"></label><label>Pasajeros<input name="pasajeros" type="number" min="1" value="1" required></label><label>Tipo de viaje<select name="tipo"><option>Ida y vuelta</option><option>Solo ida</option><option>Multidestino</option></select></label>
+</div>
+<fieldset><legend>Servicios requeridos</legend><div class="checks"><label><input type="checkbox" name="servicios" value="Boleto aereo" checked> Boleto aéreo</label><label><input type="checkbox" name="servicios" value="Hotel"> Hotel</label><label><input type="checkbox" name="servicios" value="Seguro de viaje"> Seguro de viaje</label><label><input type="checkbox" name="servicios" value="Alquiler de vehiculo"> Alquiler de vehículo</label><label><input type="checkbox" name="servicios" value="Traslado al aeropuerto"> Traslado</label><label><input type="checkbox" name="servicios" value="Asesoria de itinerario"> Asesoría</label></div></fieldset>
+<label>Observaciones<textarea name="observaciones" rows="4" placeholder="Equipaje, escalas, edades de menores u otra información..."></textarea></label>
+<label class="consent"><input type="checkbox" required> Autorizo el uso de estos datos para gestionar mi cotización.</label>
+<button class="submit" type="submit">Guardar y enviar por WhatsApp</button><p id="status" aria-live="polite"></p>
+</form></section></main>
+<footer><b>cotiza tuproximo viaje</b><span>Atención: <a href="tel:+87900263"(5048700263</a></span></footer>
+<script src="app.js"></script></body></html>
